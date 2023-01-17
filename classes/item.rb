@@ -13,7 +13,6 @@ class Item
 
   def add_genre(genre)
     @genre = genre
-    genre.add_item(genre)
   end
 
   def add_source(source)
@@ -43,7 +42,3 @@ class Item
     false
   end
 end
-
-item = Item.new('Jan 03 2020')
-puts item.publish_date
-puts item.move_to_archive
