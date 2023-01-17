@@ -8,6 +8,8 @@ class Source
   end
 
   def add_item(item)
+    return if @items.include? item
+
     @items.push(item)
     item.add_source(self)
   end
