@@ -1,6 +1,8 @@
 require './item'
 class Book  < Item
-def initialize(publisher,date,cover_state)
+attr_accessor :publisher, :cover_state
+
+def initialize(publisher,date,cover_state = '')
 @publisher = publisher    
 @cover_state = cover_state
 super(date)
@@ -13,8 +15,13 @@ return true
 else
   false
 end
-    
   end
+
+  def list_books()
+
+  @  
+  end
+
 
 
 end
