@@ -44,6 +44,3 @@ class Item
   end
 end
 
-item = Item.new('Jan 03 2020')
-puts item.publish_date
-puts item.move_to_archive
