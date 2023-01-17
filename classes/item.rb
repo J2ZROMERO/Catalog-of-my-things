@@ -21,7 +21,6 @@ class Item
 
   def add_label(label)
     @label = label
-    label.add_item(label)
   end
 
   def add_author(author)
