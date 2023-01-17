@@ -1,4 +1,4 @@
-require './team'
+require './classes/team'
 require 'date'
 
 class Game < Team
