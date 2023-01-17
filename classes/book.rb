@@ -1,6 +1,5 @@
 require './classes/item'
 class Book < Item
-  
   def initialize(publisher, date, cover_state = '')
     @publisher = publisher
     @cover_state = cover_state

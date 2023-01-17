@@ -2,8 +2,7 @@ require './classes/item'
 require 'securerandom'
 
 class Label
-  
-  def initialize(title,color)
+  def initialize(title, color)
     @id = SecureRandom.uuid
     @title = title
     @color = color
