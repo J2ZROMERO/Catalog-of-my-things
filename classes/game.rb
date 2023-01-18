@@ -13,6 +13,8 @@ class Game < Item
     @game_list = []
   end
 
+  private
+
   def can_be_archived?
     if (Date.today.year - Date.parse(@publish_date).year).to_i > 10 &&
        (Date.today.year - Date.parse(@last_played_at).year).to_i > 2
