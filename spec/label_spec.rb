@@ -13,5 +13,4 @@ describe Label do
       expect(@date.items.length).to be 1
     end
   end
-
 end
