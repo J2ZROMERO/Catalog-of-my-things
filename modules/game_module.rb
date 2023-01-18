@@ -1,5 +1,7 @@
 require '../classes/game'
 require '../app'
+require '../classes/label'
+require '../classes/author'
 
 module GameModule
   def add_game
@@ -7,6 +9,7 @@ module GameModule
     publish_date = gets.chomp
     puts 'Is it a multiplayer game? Enter 0 for yes and 1 for no'
     multiplayer = gets.chomp
+    multiplayer = multiplayer.downcase == '1'
     puts 'Last played date'
     last_played_date = gets.chomp
 
@@ -78,6 +81,11 @@ module GameModule
 
   def show_games
     @list_games.each_with_index do |game, index|
+      gametitle = game.label.title || 'no game title'
+      authorfirstname = game.author.first_name || 'no author first name'
+      authorlastname = game.author.last_name || 'no autor last name'
+      # multiplayer = game.multiplayer? "YES" : "NO"
+      puts "[#{index}] #{gametitle} By #{authorfirstname} #{authorlastname} and is #{game.multiplayer?"mMltiplayer player game" : "Single player game"}"
     end
   end
 end
