@@ -38,7 +38,7 @@ class SelectMethod
   def save_json
     # File.write('books.json', JSON.pretty_generate(@app.list_books))
     # File.write('people.json', JSON.pretty_generate(@app.list_people))
-    # File.write('rental.json', JSON.pretty_generate(@app.list_rentals))
+    File.write('./json/movies.json', JSON.pretty_generate(@app.list_movies))
   end
 
   def assign_method(input)

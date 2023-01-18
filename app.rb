@@ -1,10 +1,19 @@
+require './classes/movie'
+require './classes/label'
+require './classes/source'
+require './modules/add_movie'
 class App
+  attr_reader :list_movies
   def initialize
     # should read from file
     @list_books = []
     @list_albums = []
     @list_games = []
     @list_movies = []
+    @list_genres = []
+    @list_labels = []
+    @list_authors = []
+    @list_sources = []
   end
 
   def show_books
@@ -47,9 +56,9 @@ class App
     # code comes from module
   end
 
-  def add_movie
-    # code comes from module
-  end
+
+  include AddMovie
+
 
   def add_game
     # code comes from module
