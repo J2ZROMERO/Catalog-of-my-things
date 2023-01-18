@@ -16,7 +16,7 @@ describe Label do
 
   context 'When testing the book class' do
     it 'The method can_be_archived? from book  must return false' do
-      expect(@date.items[0].can_be_archived?).to be false
+      expect(@date.items[0].move_to_archive).to be false
     end
   end
 end
