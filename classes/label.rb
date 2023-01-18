@@ -4,6 +4,7 @@ require './classes/book'
 
 class Label
   attr_reader :items
+
   def initialize(title, color)
     @id = SecureRandom.uuid
     @title = title
@@ -18,10 +19,3 @@ class Label
     item.add_label(self)
   end
 end
-
-
-      
-      
-      
-      
-     
