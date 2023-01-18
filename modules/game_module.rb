@@ -43,4 +43,41 @@ module GameModule
     puts 'Author added to this game successfully!'
 
   end
+
+  def create_label
+    puts 'Lable title'
+    title = gets.chomp
+    puts 'Label color'
+    color = gets.chomp
+    newlabel = Label.new(title, color)
+    @label_list.push(
+      {
+        "title_label" =>newlabel.title,
+        "color_label" => newlabel.color_label
+      }
+    )
+
+    puts 'label created successfully!'
+  end
+
+  def create_author
+    puts 'Author first name'
+    first = gets.chomp
+    puts 'Author last name'
+    last = gets.chomp
+
+    newauthor = Author.new(first, last)
+    @author_list.push(
+      {
+        "firstname" => newauthor.first,
+        "lastname" => newauthor.last
+      }
+    )
+    puts 'Author created successfully!'
+  end
+
+  def show_games
+    @list_games.each_with_index do |game, index|
+    end
+  end
 end
