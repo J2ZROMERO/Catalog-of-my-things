@@ -14,5 +14,4 @@ class Author
     @items.push(item) unless @items.include?(item)
     item.add_author(self)
   end
-
 end

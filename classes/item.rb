@@ -27,6 +27,7 @@ class Item
     @author = author
     # author.add_item(author)
     return if author.nil?
+
     author.items.push(self) unless author.items.include?(self)
   end
 
