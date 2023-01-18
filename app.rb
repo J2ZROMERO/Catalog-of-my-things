@@ -3,10 +3,9 @@ require './modules/show_books_module'
 require './modules/show_labels_module'
 require './modules/show_authors_module'
 
-
-
 class App
   attr_accessor :list_books, :list_authors, :list_labels
+
   def initialize
     # should read from file
     @list_books = []
@@ -17,7 +16,7 @@ class App
     @list_authors = []
   end
 
-  include Show_books_module
+  include ShowBooksModule
 
   def show_albums
     # code comes from module
@@ -35,18 +34,15 @@ class App
     # code comes from module
   end
 
+  include ShowLabelsModule
 
-  include Show_labels_module
-
-  include Show_authors_module
+  include ShowAuthorsModule
 
   def show_sources
     # code comes from module
   end
 
-  
-  include Add_book_module
-  
+  include AddBookModule
 
   def add_album
     # code comes from module
@@ -60,4 +56,3 @@ class App
     # code comes from module
   end
 end
-

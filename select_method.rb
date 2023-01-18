@@ -30,9 +30,9 @@ class SelectMethod
   end
 
   def load_json
-     @app.list_books = read_file('./json/books.json') == '404' ? [] : read_file('./json/books.json')
-     @app.list_authors = read_file('./json/authors.json') == '404' ? [] : read_file('./json/authors.json')
-     @app.list_labels = read_file('./json/labels.json') == '404' ? [] : read_file('./json/labels.json')
+    @app.list_books = read_file('./json/books.json') == '404' ? [] : read_file('./json/books.json')
+    @app.list_authors = read_file('./json/authors.json') == '404' ? [] : read_file('./json/authors.json')
+    @app.list_labels = read_file('./json/labels.json') == '404' ? [] : read_file('./json/labels.json')
     # @app.list_people = read_file('people.json') == '404' ? [] : read_file('people.json')
     # @app.list_rentals = read_file('rental.json') == '404' ? [] : read_file('rental.json')
   end
@@ -52,4 +52,3 @@ class SelectMethod
     end
   end
 end
-
