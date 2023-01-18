@@ -1,3 +1,5 @@
+require './modules/game_module'
+
 class App
   def initialize
     # should read from file
@@ -5,6 +7,10 @@ class App
     @list_albums = []
     @list_games = []
     @list_movies = []
+    @list_labels = []
+    @list_authors = []
+    @list_genre = []
+    @list_sources = []
   end
 
   def show_books
@@ -19,9 +25,8 @@ class App
     # code comes from module
   end
 
-  def show_games
-    # code comes from module
-  end
+  #includes add_game, create_author, create_label, show_authors, and show_label methods
+  include GameModule
 
   def show_genres
     # code comes from module
