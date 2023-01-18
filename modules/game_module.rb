@@ -88,4 +88,10 @@ module GameModule
       puts "[#{index}] #{gametitle} By #{authorfirstname} #{authorlastname} and is #{game.multiplayer?"mMltiplayer player game" : "Single player game"}"
     end
   end
+
+  def show_authors
+    @list_authors.each_with_index do |author, index|
+      puts "[#{index}] First name: #{author['firstname']}  Last name: #{author['lastname']}}"
+    end
+  end
 end
