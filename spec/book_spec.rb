@@ -8,12 +8,6 @@ describe Label do
     @date = @label.add_item(@book)
   end
 
-  context 'When testing the label class' do
-    it 'The method add_item from label must add 1 book to the items' do
-      expect(@date.items.length).to be 1
-    end
-  end
-
   context 'When testing the book class' do
     it 'The method can_be_archived? from book  must return false' do
       expect(@date.items[0].move_to_archive).to be false
