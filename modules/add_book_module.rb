@@ -1,0 +1,43 @@
+require './classes/book'
+require './classes/label'
+require './classes/author'
+module Add_book_module
+     # code comes from module
+     def add_book
+     puts "Insert the first author's name"
+     first_name = gets.chomp.to_s
+     puts "Insert the last name"
+     last_name = gets.chomp.to_s
+     puts "Insert the book's title"
+     title = gets.chomp.to_s
+     puts "Insert the publisher's name"
+     publisher = gets.chomp.to_s
+     puts "Insert the publish date"
+     date = gets.chomp.to_s
+     puts "Insert the cover state"
+     cover_state = gets.chomp.to_s
+   
+ author = Author.new(first_name,last_name)
+ @label = Label.new(title)
+ book = Book.new(publisher,date,cover_state)
+ @label.add_item(book)
+ book.add_label(@label)
+ author.add_item(book)
+ book.add_author(author)
+
+ @list_books.push(
+   {
+'Title' => book.label.title,
+'Publisher' => book.publisher,
+'Date' => book.publish_date,
+'Author' => book.author.first_name 
+ }
+ )
+ @list_labels.push({
+  "title" => @label.title
+ })
+ @list_authors.push({
+  "Author" => author.first_name
+ })
+end
+end

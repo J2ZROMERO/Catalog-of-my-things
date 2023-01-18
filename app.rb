@@ -1,15 +1,23 @@
+require './modules/add_book_module'
+require './modules/show_books_module'
+require './modules/show_labels_module'
+require './modules/show_authors_module'
+
+
+
 class App
+  attr_accessor :list_books, :list_authors, :list_labels
   def initialize
     # should read from file
     @list_books = []
     @list_albums = []
     @list_games = []
     @list_movies = []
+    @list_labels = []
+    @list_authors = []
   end
 
-  def show_books
-    # code comes from module
-  end
+  include Show_books_module
 
   def show_albums
     # code comes from module
@@ -27,21 +35,18 @@ class App
     # code comes from module
   end
 
-  def show_labels
-    # code comes from module
-  end
 
-  def show_authors
-    # code comes from module
-  end
+  include Show_labels_module
+
+  include Show_authors_module
 
   def show_sources
     # code comes from module
   end
 
-  def add_book
-    # code comes from module
-  end
+  
+  include Add_book_module
+  
 
   def add_album
     # code comes from module
@@ -55,3 +60,4 @@ class App
     # code comes from module
   end
 end
+
