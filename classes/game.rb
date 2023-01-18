@@ -1,4 +1,4 @@
-require './item'
+require './classes/item'
 require 'date'
 
 class Game < Item
