@@ -2,8 +2,11 @@ require './classes/movie'
 require './classes/label'
 require './classes/source'
 require './modules/add_movie'
+require './modules/show_movies'
+require './modules/show_sources'
 class App
-  attr_reader :list_movies
+  attr_accessor :list_movies, :list_sources
+
   def initialize
     # should read from file
     @list_books = []
@@ -24,9 +27,7 @@ class App
     # code comes from module
   end
 
-  def show_movies
-    # code comes from module
-  end
+  include ShowMovies
 
   def show_games
     # code comes from module
@@ -44,9 +45,7 @@ class App
     # code comes from module
   end
 
-  def show_sources
-    # code comes from module
-  end
+  include ShowSources
 
   def add_book
     # code comes from module
@@ -56,9 +55,7 @@ class App
     # code comes from module
   end
 
-
   include AddMovie
-
 
   def add_game
     # code comes from module
