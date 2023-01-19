@@ -1,4 +1,5 @@
-require './modules/game_module'
+require './modules/add_game_module'
+require './modules/show_game_module'
 
 class App
   def initialize
@@ -50,6 +51,8 @@ class App
   def add_movie
     # code comes from module
   end
+
+include ShowGamesModule
 
 
 end
