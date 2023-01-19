@@ -19,9 +19,7 @@ class App
     @list_sources = []
   end
 
-  def show_books
-    # code comes from module
-  end
+  include ShowBooksModule
 
   def show_albums
     # code comes from module
@@ -37,19 +35,13 @@ class App
     # code comes from module
   end
 
-  def show_labels
-    # code comes from module
-  end
+  include ShowLabelsModule
 
-  def show_authors
-    # code comes from module
-  end
+  include ShowAuthorsModule
 
   include ShowSources
 
-  def add_book
-    # code comes from module
-  end
+  include AddBookModule
 
   def add_album
     # code comes from module
