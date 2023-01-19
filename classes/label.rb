@@ -1,6 +1,6 @@
 require './classes/item'
 require 'securerandom'
-require './classes/game'
+require './classes/book'
 
 class Label
   attr_reader :items

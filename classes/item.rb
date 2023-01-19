@@ -25,6 +25,10 @@ class Item
 
   def add_author(author)
     @author = author
+    # author.add_item(author)
+    return if author.nil?
+
+    author.items.push(self) unless author.items.include?(self)
   end
 
   def move_to_archive()
