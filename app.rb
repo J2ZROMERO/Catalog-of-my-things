@@ -32,17 +32,12 @@ class App
     # code comes from module
   end
 
-  def show_labels
-    # code comes from module
-  end
 
   def show_authors
     # code comes from module
   end
 
-  def show_sources
-    # code comes from module
-  end
+
 
   def add_book
     # code comes from module
@@ -56,7 +51,5 @@ class App
     # code comes from module
   end
 
-  def add_game
-    # code comes from module
-  end
+
 end

@@ -1,16 +1,16 @@
-require '../classes/game'
-require '../app'
-require '../classes/label'
-require '../classes/author'
+require './classes/game'
+require './app'
+require './classes/label'
+require './classes/author'
 
 module GameModule
   def add_game
-    puts 'Game publish_date'
+    print 'Game publish_date: '
     publish_date = gets.chomp
-    puts 'Is it a multiplayer game? Enter 0 for yes and 1 for no'
+    print 'Is it a multiplayer game? Enter 0 for yes and 1 for no: '
     multiplayer = gets.chomp
     multiplayer = multiplayer.downcase == '1'
-    puts 'Last played date'
+    print 'Last played date: '
     last_played_date = gets.chomp
 
     game = Game.new(publish_date, last_played_date, multiplayer)
@@ -18,14 +18,14 @@ module GameModule
     @list_games.push(
       {
         "pub_date" => game.publish_date,
-        "last-played_date" => game.last_played_at
+        "last-played_date" => game.last_played_at,
         "multiplayer" => game.multiplayer
       }
     )
 
     puts 'Game added successfully!'
 
-    puts 'Would you like to add a label for this game? (0) yes (1) no'
+    print 'Would you like to add a label for this game? (0) yes (1) no: '
     ans = gets.chomp
 
     unless ans == 1
@@ -35,7 +35,7 @@ module GameModule
 
     puts 'Label added to this game successfully!'
 
-    puts 'Would you like to add an author for this game? (0) yes (1) no'
+    print 'Would you like to add an author for this game? (0) yes (1) no: '
     ans = gets.chomp
 
     unless ans == 1
@@ -48,44 +48,45 @@ module GameModule
   end
 
   def create_label
-    puts 'Lable title'
+    print 'Lable title: '
     title = gets.chomp
-    puts 'Label color'
+    print 'Label color: '
     color = gets.chomp
     newlabel = Label.new(title, color)
-    @label_list.push(
+    @list_labels.push(
       {
-        "title_label" =>newlabel.title,
-        "color_label" => newlabel.color_label
+        "title_label" => newlabel.title,
+        "color_label" => newlabel.color
       }
     )
 
-    puts 'label created successfully!'
+    # puts 'label created successfully!'
   end
 
   def create_author
-    puts 'Author first name'
+    print 'Author first name: '
     first = gets.chomp
-    puts 'Author last name'
+    print 'Author last name: '
     last = gets.chomp
 
     newauthor = Author.new(first, last)
-    @author_list.push(
+    @list_authors.push(
       {
-        "firstname" => newauthor.first,
-        "lastname" => newauthor.last
+        "firstname" => newauthor.first_name,
+        "lastname" => newauthor.last_name
       }
     )
-    puts 'Author created successfully!'
+     puts 'Author created successfully!'
   end
 
   def show_games
+    puts "Games collection = #{@list_games}"
     @list_games.each_with_index do |game, index|
+      authorfirstname = game.author['first_name']|| 'no author first name'
       gametitle = game.label.title || 'no game title'
-      authorfirstname = game.author.first_name || 'no author first name'
       authorlastname = game.author.last_name || 'no autor last name'
       # multiplayer = game.multiplayer? "YES" : "NO"
-      puts "[#{index}] #{gametitle} By #{authorfirstname} #{authorlastname} and is #{game.multiplayer?"mMltiplayer player game" : "Single player game"}"
+      puts "[#{index}] #{gametitle} By #{authorfirstname} #{authorlastname} and is #{game.multiplayer?}'Mltiplayer player game' : 'Single player game'"
     end
   end
 
