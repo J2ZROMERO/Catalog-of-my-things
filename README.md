@@ -20,11 +20,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Interacting with items] <a name="about-project"></a>
+# 📖 Catalog of my things <a name="about-project"></a>
 
 **Ruby Capstone Project**
 
-**[Interacting with items]** is a capstone project on Ruby and database module of Microverse. It is meant to help us undestand and have skills on object-oriented features of Ruby like SOLID, and design classes using UML, and implement the application using the UML diagram.
+**Catalog of my things** is a capstone project on Ruby and database module of Microverse. It is meant to help us undestand and have skills on object-oriented features of Ruby like SOLID, and design classes using UML, and implement the application using the UML diagram.
 
 ## 🛠 Built With <a name="built-with"></a>
 
