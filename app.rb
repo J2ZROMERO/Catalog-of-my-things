@@ -28,19 +28,16 @@ class App
     # code comes from module
   end
 
-  #includes add_game, create_author, create_label, show_authors, and show_label methods
+  # includes add_game, create_author, create_label, show_authors, and show_label methods
   include GameModule
 
   def show_genres
     # code comes from module
   end
 
-
   def show_authors
     # code comes from module
   end
-
-
 
   def add_book
     # code comes from module
@@ -54,7 +51,5 @@ class App
     # code comes from module
   end
 
-include ShowGamesModule
-
-
+  include ShowGamesModule
 end
