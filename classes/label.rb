@@ -1,21 +1,21 @@
-require './classes/item'
+#require './classes/item'
 require 'securerandom'
-require './classes/book'
 
 class Label
-  attr_reader :items, :title, :color, :items
+  attr_accessor :title, :color, :list_labels
+  #attr_accessor :list_labels
 
   def initialize(title, color)
     @id = SecureRandom.uuid
     @title = title
     @color = color
-    @items = []
+    @list_labels = []
   end
 
   def add_item(item)
-    return if @items.include? item
+    return if @list_labels.include?(item)
 
-    @items.push(item)
+    @list_labels.push(item)
     item.add_label(self)
   end
 end

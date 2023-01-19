@@ -2,9 +2,12 @@ require './classes/game'
 require './app'
 require './classes/label'
 require './classes/author'
+require './modules/labelhandler'
 
 module GameModule
+  include LabelHandler
   def add_game
+
     print 'Game publish_date: '
     publish_date = gets.chomp
     print 'Is it a multiplayer game? Enter 0 for yes and 1 for no: '
@@ -25,25 +28,22 @@ module GameModule
 
     puts 'Game added successfully!'
 
-    print 'Would you like to add a label for this game? (0) yes (1) no: '
-    ans = gets.chomp
-
-    unless ans == 1
-      label = create_label
-      game.add_label(label)
+    puts 'Would you like to give this item a label? (Y/N)'
+    answer = gets.chomp
+    unless answer.downcase == 'n'
+      puts 'Select an existing label by index or create a new one(0): '
+      #show_labels
+      response = gets.chomp.to_i
+      if response.zero?
+        newlabel = create_label
+        puts "newgame inside labelhandler = #{@list_games}"
+        puts "new label inside labelhandler= #{newlabel}"
+        game.add_label(newlabel)
+      else
+        game.add_label(@list_labels[response])
+      end
     end
-
-    puts 'Label added to this game successfully!'
-
-    print 'Would you like to add an author for this game? (0) yes (1) no: '
-    ans = gets.chomp
-
-    unless ans == 1
-      author = create_author
-      game.add_label(author)
-    end
-
-    puts 'Author added to this game successfully!'
+    puts 'Label added successfully'
 
   end
 
@@ -70,12 +70,7 @@ module GameModule
     last = gets.chomp
 
     newauthor = Author.new(first, last)
-    @list_authors.push(
-      {
-        "firstname" => newauthor.first_name,
-        "lastname" => newauthor.last_name
-      }
-    )
+    @list_authors.push(newauthor)
      puts 'Author created successfully!'
   end
 
@@ -93,6 +88,12 @@ module GameModule
   def show_authors
     @list_authors.each_with_index do |author, index|
       puts "[#{index}] First name: #{author['firstname']}  Last name: #{author['lastname']}}"
+    end
+  end
+
+  def show_labels
+    @list_labels.each_with_index do |label, index|
+      puts "#{index + 1}) Title: \"#{label.title}\", Color: #{label.color}, Items: #{label.items.length}"
     end
   end
 end
