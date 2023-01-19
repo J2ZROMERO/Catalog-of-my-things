@@ -22,7 +22,7 @@
 
 # 📖 [Interacting with items] <a name="about-project"></a>
 
-**Ruby Capstone Project** 
+**Ruby Capstone Project**
 
 **[Interacting with items]** is a capstone project on Ruby and database module of Microverse. It is meant to help us undestand and have skills on object-oriented features of Ruby like SOLID, and design classes using UML, and implement the application using the UML diagram.
 
@@ -31,13 +31,13 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Backend</summary>
+  <summary>Programming language</summary>
   <ul>
     <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
   </ul>
 </details>
 <details>
-<summary>Interface tool</summary>
+<summary>Editor software used.</summary>
   <ul>
     <li><a href="https://code.visualstudio.com/">Viual Studio Code</a></li>
   </ul>
@@ -69,10 +69,10 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need: Ruby install on your local computer. (Rspec aswell if you gonna run the test files)
 
-
 ### Setup
 
-- Clone this repository to your desired folder.
+- Clone this [repository](git@github.com:J2ZROMERO/Ruby-group-capstone.git
+) to your desired folder.
 ### Usage
 
 - This repository includes the different classes that you can use to create new objects.
@@ -116,7 +116,7 @@ To run tests, run the following command:
 - GitHub: [@gandradep](https://github.com/gandradep)
 - Twitter: [@leribagandrade](https://twitter.com/leribagandrade)
 - LinkedIn: [Gabriel-Andrade](https://www.linkedin.com/in/gabriel-andrade-silla-turca/)
-- 
+-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -144,18 +144,13 @@ Feel free to check the [issues page](../../issues/).
 
 > Feel free to share your inquires to our social links provided and we will help you.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank  @Microverse for providing this project requirements that helps us improve  our OOP skills.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](https://github.com/J2ZROMERO/Ruby-group-capstone./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
