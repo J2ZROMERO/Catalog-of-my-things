@@ -1,48 +1,43 @@
 require './classes/game'
-require './app'
 require './classes/label'
 require './classes/author'
-require './modules/labelhandler'
 
 module GameModule
-  include LabelHandler
+  # include LabelHandler
   def add_game
 
     print 'Game publish_date: '
-    publish_date = gets.chomp
+    @publish_date = gets.chomp
     print 'Is it a multiplayer game? Enter 0 for yes and 1 for no: '
     multiplayer = gets.chomp
-    multiplayer = multiplayer.downcase == '1'
+    @multiplayer = multiplayer.downcase == '1'
     print 'Last played date: '
-    last_played_date = gets.chomp
+    @last_played_at = gets.chomp
 
-    game = Game.new(publish_date, last_played_date, multiplayer)
+    print "Enter game's label"
+    @title = gets.chomp
+    @label = Label.new(@title)
+    newgame = Game.new(@publish_date, @last_played_at, @multiplayer)
+    @label.add_item(newgame)
+    newgame.add_label(@label)
 
     @list_games.push(
       {
-        "pub_date" => game.publish_date,
-        "last-played_date" => game.last_played_at,
-        "multiplayer" => game.multiplayer
+        "game_label" => newgame.label.title,
+        "publish_date" => newgame.publish_date,
+        "multiplayer" => newgame.multiplayer,
+        "last_palyed_date" => newgame.last_played_at
       }
     )
 
     puts 'Game added successfully!'
 
-    puts 'Would you like to give this item a label? (Y/N)'
-    answer = gets.chomp
-    unless answer.downcase == 'n'
-      puts 'Select an existing label by index or create a new one(0): '
-      #show_labels
-      response = gets.chomp.to_i
-      if response.zero?
-        newlabel = create_label
-        puts "newgame inside labelhandler = #{@list_games}"
-        puts "new label inside labelhandler= #{newlabel}"
-        game.add_label(newlabel)
-      else
-        game.add_label(@list_labels[response])
-      end
-    end
+    @list_labels.push(
+      {
+        "label_title" => @label.title
+      }
+    )
+
     puts 'Label added successfully'
 
   end
@@ -77,11 +72,11 @@ module GameModule
   def show_games
     puts "Games collection = #{@list_games}"
     @list_games.each_with_index do |game, index|
-      authorfirstname = game.author['first_name']|| 'no author first name'
-      gametitle = game.label.title || 'no game title'
-      authorlastname = game.author.last_name || 'no autor last name'
+      #authorfirstname = game.author['first_name']|| 'no author first name'
+      gametitle = newgame.label["label_title"] || 'no game title'
+      #authorlastname = game.author.last_name || 'no autor last name'
       # multiplayer = game.multiplayer? "YES" : "NO"
-      puts "[#{index}] #{gametitle} By #{authorfirstname} #{authorlastname} and is #{game.multiplayer?}'Mltiplayer player game' : 'Single player game'"
+      puts "[#{index}] #{gametitle}  and is #{game.multiplayer?}'Mltiplayer player game' : 'Single player game'"
     end
   end
 
