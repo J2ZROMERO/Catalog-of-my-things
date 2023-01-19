@@ -30,15 +30,13 @@ class SelectMethod
   end
 
   def load_json
-    # @app.list_books = read_file('books.json') == '404' ? [] : read_file('books.json')
-    # @app.list_people = read_file('people.json') == '404' ? [] : read_file('people.json')
-    # @app.list_rentals = read_file('rental.json') == '404' ? [] : read_file('rental.json')
+    @app.list_albums = read_file('./json/albums.json') == '404' ? [] : read_file('./json/albums.json')
+    @app.list_genres = read_file('./json/genre.json') == '404' ? [] : read_file('./json/genre.json')
   end
 
   def save_json
-    # File.write('books.json', JSON.pretty_generate(@app.list_books))
-    # File.write('people.json', JSON.pretty_generate(@app.list_people))
-    # File.write('rental.json', JSON.pretty_generate(@app.list_rentals))
+    File.write('./json/albums.json', JSON.pretty_generate(@app.list_albums))
+    File.write('./json/genre.json', JSON.pretty_generate(@app.list_genres))
   end
 
   def assign_method(input)

@@ -3,7 +3,7 @@ require 'securerandom'
 require './classes/book'
 
 class Label
-  attr_reader :items
+  attr_reader :items, :title
 
   def initialize(title, color)
     @id = SecureRandom.uuid
