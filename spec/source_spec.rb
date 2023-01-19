@@ -10,7 +10,7 @@ describe Source do
       expect(@source.name).to eq 'source1'
     end
     it 'Test add_item class' do
-      movie = Movie.new('2010-10-10', false)
+      movie = Movie.new('2010-10-10', silent: false)
       @source.add_item(movie)
       expect(@source.items[0].silent).to eq false
       expect(@source.items[0].publish_date).to eq '2010-10-10'

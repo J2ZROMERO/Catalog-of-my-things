@@ -3,7 +3,7 @@ require './classes/item'
 class Movie < Item
   attr_accessor :silent
 
-  def initialize(publish_date, silent)
+  def initialize(publish_date, silent: true)
     super(publish_date)
     @silent = silent
   end
