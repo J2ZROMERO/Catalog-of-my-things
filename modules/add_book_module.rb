@@ -3,7 +3,6 @@ require './classes/label'
 require './classes/author'
 module AddBookModule
   def add_book
-    
     puts "Insert the first author's name"
     @first_name = gets.chomp.to_s
     puts "Insert the book's title"
