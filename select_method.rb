@@ -29,9 +29,14 @@ class SelectMethod
     end
   end
 
-  def load_json
+  def load_json1
+    @app.list_albums = read_file('./json/albums.json') == '404' ? [] : read_file('./json/albums.json')
+    @app.list_genres = read_file('./json/genre.json') == '404' ? [] : read_file('./json/genre.json')
     @app.list_movies = read_file('./json/movies.json') == '404' ? [] : read_file('./json/movies.json')
     @app.list_sources = read_file('./json/sources.json') == '404' ? [] : read_file('./json/sources.json')
+  end
+
+  def load_json2
     @app.list_books = read_file('./json/books.json') == '404' ? [] : read_file('./json/books.json')
     @app.list_authors = read_file('./json/authors.json') == '404' ? [] : read_file('./json/authors.json')
     @app.list_labels = read_file('./json/labels.json') == '404' ? [] : read_file('./json/labels.json')
@@ -39,6 +44,8 @@ class SelectMethod
   end
 
   def save_json
+    File.write('./json/albums.json', JSON.pretty_generate(@app.list_albums))
+    File.write('./json/genre.json', JSON.pretty_generate(@app.list_genres))
     File.write('./json/books.json', JSON.pretty_generate(@app.list_books))
     File.write('./json/authors.json', JSON.pretty_generate(@app.list_authors))
     File.write('./json/labels.json', JSON.pretty_generate(@app.list_labels))
