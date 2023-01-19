@@ -23,20 +23,20 @@ class App
     @list_labels = []
     @list_authors = []
     @list_sources = []
-  end 
-  
+  end
+
   include ShowBooksModule
 
   def show_albums
     # code comes from module
   end
-  
+
   include ShowMovies
 
   def show_genres
     # code comes from module
   end
-  
+
   include ShowLabelsModule
 
   include ShowAuthorsModule
@@ -44,15 +44,14 @@ class App
   include ShowSources
 
   include AddBookModule
-  
+
   include GameModule
-  
+
   include ShowGamesModule
 
   def add_album
     # code comes from module
   end
 
-  include AddMovie 
-
+  include AddMovie
 end
