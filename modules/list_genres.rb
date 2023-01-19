@@ -9,4 +9,3 @@ module ShowGenres
     end
   end
 end
-

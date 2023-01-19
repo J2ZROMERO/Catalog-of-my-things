@@ -51,7 +51,7 @@ class App
 
   include GameModule
 
-  include ShowGamesModule  
+  include ShowGamesModule
 
   include AddMovie
 end

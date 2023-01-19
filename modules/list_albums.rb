@@ -9,5 +9,3 @@ module ListAlbums
     end
   end
 end
-
-

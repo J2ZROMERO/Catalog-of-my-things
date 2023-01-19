@@ -4,7 +4,9 @@ class Main
   def initialize
     @select_method = SelectMethod.new
     puts 'My items collection!'
-    @select_method.load_json
+    @select_method.load_json1
+    @select_method.load_json2
+
     @menu = <<~TEXT
       Please choose an option by entering a number:
        1 - List all books
