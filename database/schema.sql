@@ -45,7 +45,7 @@ CREATE TABLE source (
   source_name VARCHAR(80)
 );
 
-CREATE GAME(
+CREATE TABLE GAME(
   author_ID INT NOT NULL, 
   multiplayer BOOLEAN NOT NULL,
   last_played_at NOT NULL,
