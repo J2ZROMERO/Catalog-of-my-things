@@ -1,11 +1,14 @@
 require './classes/item'
+
 class Book < Item
-  attr_reader :publisher, :cover_state
+  attr_accessor :list_books, :cover_state
+  attr_reader :publisher
 
   def initialize(publisher, date, cover_state = '')
     @publisher = publisher
     @cover_state = cover_state
     super(date)
+    @list_books = []
   end
 
   private
