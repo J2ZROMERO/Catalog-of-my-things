@@ -1,0 +1,16 @@
+[
+  {
+    "id": "3bcf9fb1-f81c-487f-9cde-6bef9c192378",
+    "publish_date": "2010-12-30",
+    "silent": true,
+    "title": "Avatar",
+    "source": "Online shop"
+  },
+  {
+    "id": "c3413388-3991-4a33-963d-43dabffbbd5f",
+    "publish_date": "1995-01-01",
+    "silent": false,
+    "title": "Batman",
+    "source": "friend"
+  }
+]

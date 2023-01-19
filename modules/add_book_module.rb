@@ -3,9 +3,18 @@ require './classes/label'
 require './classes/author'
 module AddBookModule
   def add_book
-    include Inputs
+    puts "Insert the first author's name"
+    @first_name = gets.chomp.to_s
+    puts "Insert the book's title"
+    @title = gets.chomp.to_s
+    puts "Insert the publisher's name"
+    @publisher = gets.chomp.to_s
+    puts 'Insert the publish date'
+    @date = gets.chomp.to_s
+    puts 'Insert the cover state'
+
     @cover_state = gets.chomp.to_s
-    author = Author.new(@first_name, @last_name)
+    author = Author.new(@first_name,'')
     @label = Label.new(@title)
     book = Book.new(@publisher, @date, @cover_state)
     @label.add_item(book)
@@ -21,21 +30,5 @@ module AddBookModule
 
     @list_labels << { 'title' => @label.title }
     @list_authors << { 'Author' => author.first_name }
-  end
-end
-
-module Inputs
-  def inputs
-    puts "Insert the first author's name"
-    @first_name = gets.chomp.to_s
-    puts 'Insert the last name'
-    @last_name = gets.chomp.to_s
-    puts "Insert the book's title"
-    @title = gets.chomp.to_s
-    puts "Insert the publisher's name"
-    @publisher = gets.chomp.to_s
-    puts 'Insert the publish date'
-    @date = gets.chomp.to_s
-    puts 'Insert the cover state'
   end
 end

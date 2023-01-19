@@ -1,14 +1,14 @@
 [
   {
-    "Title": "Abbey Road",
-    "Publish_date": "10 01 1968",
-    "Is on spotify?": "true",
-    "Genre": "Rock"
+    "Title": "travel",
+    "Publish_date": "2022-01-01",
+    "Is on spotify?": "false",
+    "Genre": "rock"
   },
   {
-    "Title": "The Kids are alright",
-    "Publish_date": "01 01 1968",
+    "Title": "Pop",
+    "Publish_date": "1990-01-01",
     "Is on spotify?": "true",
-    "Genre": "Rock"
+    "Genre": "love"
   }
 ]
