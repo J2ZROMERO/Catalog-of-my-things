@@ -2,6 +2,7 @@ require './classes/item'
 
 class Book < Item
   attr_accessor :list_books, :cover_state
+  attr_reader :publisher, :cover_state
 
   def initialize(publisher, date, cover_state = '')
     @publisher = publisher
@@ -9,6 +10,8 @@ class Book < Item
     super(date)
     @list_books = []
   end
+
+  private
 
   def can_be_archived?
     parent_boolean_value = super()
