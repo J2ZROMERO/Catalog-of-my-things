@@ -30,6 +30,7 @@ class SelectMethod
   end
 
   def load_json
+    @app.list_games = read_file('./json/games.json') == '404' ? [] : read_file('./json/games.json')
     # @app.list_books = read_file('books.json') == '404' ? [] : read_file('books.json')
     # @app.list_people = read_file('people.json') == '404' ? [] : read_file('people.json')
     # @app.list_rentals = read_file('rental.json') == '404' ? [] : read_file('rental.json')

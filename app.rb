@@ -14,7 +14,7 @@ class App
     @list_sources = []
   end
 
-  attr_reader :list_games
+  attr_accessor :list_games
 
   def show_books
     # code comes from module
