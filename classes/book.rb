@@ -2,7 +2,7 @@ require './classes/item'
 
 class Book < Item
   attr_accessor :list_books, :cover_state
-  attr_reader :publisher, :cover_state
+  attr_reader :publisher
 
   def initialize(publisher, date, cover_state = '')
     @publisher = publisher

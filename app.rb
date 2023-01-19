@@ -1,4 +1,3 @@
-
 require './modules/add_game_module'
 require './modules/show_game_module'
 require './modules/add_book_module'
@@ -7,7 +6,7 @@ require './modules/show_labels_module'
 require './modules/show_authors_module'
 
 class App
-  attr_accessor :list_books, :list_authors, :list_labels
+  attr_accessor :list_books, :list_authors, :list_labels, :list_games
 
   def initialize
     # should read from file
@@ -21,11 +20,8 @@ class App
     @list_sources = []
   end
 
-  attr_accessor :list_games
-
   def show_books
     # code comes from module
-  end
   end
 
   include ShowBooksModule
@@ -44,7 +40,6 @@ class App
   def show_genres
     # code comes from module
   end
-
 
   def show_authors
     # code comes from module
