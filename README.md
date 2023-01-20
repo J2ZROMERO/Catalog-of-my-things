@@ -151,6 +151,6 @@ I would like to thank  @Microverse for providing this project requirements that 
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/J2ZROMERO/Ruby-group-capstone.git/LICENSE) licensed.
+This project is [MIT](https://github.com/J2ZROMERO/Ruby-group-capstone./.LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
