@@ -1,0 +1,14 @@
+[
+  {
+    "Title": "travel",
+    "Publish_date": "2022-01-01",
+    "Is on spotify?": "false",
+    "Genre": "rock"
+  },
+  {
+    "Title": "Pop",
+    "Publish_date": "1990-01-01",
+    "Is on spotify?": "true",
+    "Genre": "love"
+  }
+]

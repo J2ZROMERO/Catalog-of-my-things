@@ -1,90 +1,48 @@
 <a name="readme-top"></a>
-
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
-
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
-</div>
-
-<!-- TABLE OF CONTENTS -->
-
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 \[Interacting with items\] ](#-interacting-with-items-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+  - [authors](#authors)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Catalog of my things <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+**Ruby Capstone Project**
 
-**[your_project__name]** is a...
+**Catalog of my things** is a capstone project on Ruby and database module of Microverse. It is meant to help us undestand and have skills on object-oriented features of Ruby like SOLID, and design classes using UML, and implement the application using the UML diagram.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 <details>
-  <summary>Client</summary>
+  <summary>Programming language</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
   </ul>
 </details>
-
 <details>
-  <summary>Server</summary>
+<summary>Editor software used.</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://code.visualstudio.com/">Viual Studio Code</a></li>
   </ul>
 </details>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <details>
 <summary>Database</summary>
@@ -97,137 +55,76 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **Create your items**
+- **List and check your items**
+- **Save your inventory and check it latter (or add new stuff!)**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
-
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
+In order to run this project you need: Ruby install on your local computer. (Rspec aswell if you gonna run the test files)
 
 ### Setup
 
-Clone this repository to your desired folder:
-
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
-
-### Install
-
-Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
-
+- Clone this [repository](git@github.com:J2ZROMERO/Ruby-group-capstone.git
+) to your desired folder.
 ### Usage
 
-To run the project, execute the following command:
+- This repository includes the different classes that you can use to create new objects.
 
-<!--
-Example command:
+- You can also run the command "ruby main.rb", to interact with the "Catalog of my things" User Interface.
 
-```sh
-  rails server
-```
---->
 
 ### Run tests
 
 To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
+- [Install RSPEC gem](https://rspec.info/)
+- Open a terminal in the root folder where you files are:
+  execute "rspec spec spec/file_spec.rb"
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## authors
 
-> Mention all of the collaborators of this project.
+👤 **JOSE ZEPEDA**
 
-👤 **Author1**
+- GitHub: [J2ZROMERO](https://github.com/J2ZROMERO)
+- Twitter: [@JOSEZEPED4](https://twitter.com/JOSEZEPED4)
+- LinkedIn: [JOSE ZEPEDA](https://www.linkedin.com/in/jose-zepeda-733ab91ab/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
+👤 **Amare Kassa**
+
+- GitHub: [Github hhandle](https://github.com/amare1990)
+- Twitter: [Twitter handle](https://twitter.com/@amaremek)
+- LinkedIn: [LnkedIn handle](https://www.linkedin.com/in/amaremek)
+
+👤 **Lucas Bermudez**
+
+- GitHub: [@oklukeok](https://github.com/oklukeok)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-👤 **Author2**
+👤 **Gabriel Andrade**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
+- GitHub: [@gandradep](https://github.com/gandradep)
+- Twitter: [@leribagandrade](https://twitter.com/leribagandrade)
+- LinkedIn: [Gabriel-Andrade](https://www.linkedin.com/in/gabriel-andrade-silla-turca/)
+-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- **Filter the items by genre, author, label or source**
+- **Connect the application with the database**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -245,44 +142,15 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
+> Feel free to share your inquires to our social links provided and we will help you.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
+I would like to thank  @Microverse for providing this project requirements that helps us improve  our OOP skills.
 
-I would like to thank...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](https://github.com/J2ZROMERO/Ruby-group-capstone./.LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

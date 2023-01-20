@@ -1,0 +1,14 @@
+[
+  {
+    "game_label": "war",
+    "publish_date": "2000-01-01",
+    "multiplayer": true,
+    "last_palyed_date": "2000-02-01"
+  },
+  {
+    "game_label": "Luccas",
+    "publish_date": "2000-10-10",
+    "multiplayer": false,
+    "last_palyed_date": "2000-01-01"
+  }
+]
